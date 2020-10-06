@@ -36,5 +36,3 @@ const mergeSort = function (array) {
   }
   return sorted;
 };
-const numbers = [4, 0, 3, 2, 5, 1, 9, 8, 7, 6];
-console.log(mergeSort(numbers));
