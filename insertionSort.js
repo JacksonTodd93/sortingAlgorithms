@@ -1,19 +1,16 @@
-const insertionSort = function(arr) {
-
-};
-
-insertionSort = (array) => {
-  for (outer = 1; outer < array.length; outer++) {
-    for (inner = 0; inner < outer; inner++) {
-      console.log(array.join(' '))
-      if (array[outer] < array[inner]) {
-        const [element] = array.splice(outer, 1)
-        array.splice(inner, 0, element)
+const insertionSort = function (array) {
+  for (var i = 1; i < array.length; i++) {
+    var num = i;
+    var current = array[i];
+    while (current < array[num - 1]) {
+      array[num] = array[num - 1];
+      array[num - 1] = current;
+      if (num > 1) {
+        num--;
       }
     }
   }
-  console.log(array.join(' '))
-  return array
-}
+  return array;
+};
 const numbers = [8, 5, 6, 9, 3, 1, 4, 2, 7, 10]
-insertionSort(numbers)
+console.log(insertionSort(numbers));
